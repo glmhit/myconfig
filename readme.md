@@ -1,25 +1,26 @@
-## 软件清单  
-
-|软件  |版本    | 
----| ---|-----|---
-	|Ubuntu|14.04     |
-删除| libroffice  |  |
-程序员|  zsh | oh-my-zsh |
-     	|  git|  |
-  		|gitflow   |  |
-		| gvim |spf13  |
-        | tmux |    |
-        |tree	|
-        |meld   |    
-        |     |     |
-		|  cmake |  |   
-		|  cmake-gui |  |   
-        |  cmake |  |   
-        |atom    |   |
-        |chrome| switch  |
- 办公  |wps      |
-      | foxit reader  |  
-      |sogou pinyin |    | 
+## 软件清单    
+| 软件  |版本    |       
+| ---|-----| 
+Ubuntu|14.04     |  
+删除| libroffice  |  |  
+程序员|     
+zsh | oh-my-zsh |  
+ |  git|  |  
+ |gitflow   |  |  
+| gvim |spf13  |  
+   | tmux |    |
+ |tree	|
+ |meld   |    
+ |     |     |
+|  cmake |  |   
+|  cmake-gui |  |   
+ |  cmake |  |   
+ |atom    |   |
+ |chrome| switch  |
+ 办公  |
+ wps      |
+ | foxit reader  |  
+ |sogou pinyin |    | 
       
 
 
