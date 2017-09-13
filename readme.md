@@ -63,3 +63,6 @@ zsh | oh-my-zsh |
     3.查看用户登录日志：                                   $last
     4.查看当前用户的计划任务：                         $crontab -l
 七、查看安装软件包的信息：                             $dpkg -L<软件名称>
+http://blog.csdn.net/gatieme/article/details/44856359#t25
+
+gnome-open

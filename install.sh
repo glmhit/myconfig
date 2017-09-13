@@ -20,8 +20,8 @@ sudo apt-get install cmake3 cmake3-doc cmake3-curses-gui cmake3-qt-gui -y
 sudo apt-get install vim-gtk -y
 curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 #tmux
-sudo apt-get install tmux terminator -y
-
+sudo apt-get install tmux terminator -y   nautilus-open-terminal
+ 
 sudo apt-get install tree meld -y
 https://code.visualstudio.com/docs/?dv=linux64_deb
 
