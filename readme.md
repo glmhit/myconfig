@@ -1,27 +1,48 @@
 ## 软件清单    
-| 软件  |版本    |       
-| ---|-----| 
-Ubuntu|14.04     |  
-删除| libroffice  |  |  
-程序员|     
-zsh | oh-my-zsh |  
- |  git|  |  
- |gitflow   |  |  
-| gvim |spf13  |  
-   | tmux |    |
- |tree	|
- |meld   |    
- |     |     |
-|  cmake |  |   
-|  cmake-gui |  |   
- |  cmake |  |   
- |atom    |   |
- |chrome| switch  |
- 办公  |
- wps      |
- | foxit reader  |  
- |sogou pinyin |    | 
-      
+软件   版本         
+Ubuntu 14.04        
+
+
+
+删除  libroffice        
+### 开发工具      
+#### 终端
+zsh   oh-my-zsh   
+terminator
+tmux       
+ftf
+tree
+guake
+ccat  上色的cat
+htop 进程
+iotop IO查看
+figlet
+fzf   模糊查看
+
+
+### editor & version
+git      
+gitflow         
+gvim  spf13     
+meld        
+atom 
+
+### 编译构建
+cmake     
+cmake-gui        
+clion    C++ IDE
+
+### 浏览器
+chrome  
+switch   
+
+日常办公   
+wps       
+foxit reader     
+sogou pinyin        
+Shutter   截图i
+GIMP  图片
+
 
 
 
@@ -43,7 +64,7 @@ zsh | oh-my-zsh |
     5.查看系统运行时间、用户数和负载：            $uptime
     6.查看系统负载：                                           $cat /proc/loadavg
 三、硬盘和分区信息
-    1.查看挂载分区信息：                                    $mount |column -t
+    1.查看挂载分区信息：                                    $mount  column -t
     2.查看硬盘分区信息：                                    $sudo fdisk -l
     3.查看所有交换分区信息：                             $swapon -s
     4.查看硬盘参数信息：                                    $sudo hdparm -i /dev/had
