@@ -3,21 +3,22 @@
 Ubuntu 14.04        
 
 
-
-删除  libroffice        
-### 开发工具      
+删除  libreoffice
+sogou
+chrome
+        
+### 开发工具 
 #### 终端
 zsh   oh-my-zsh   
 terminator
 tmux       
-ftf
-tree
-guake
+fzf   历史命令
+guake  一键终端
 ccat  上色的cat
 htop 进程
 iotop IO查看
 figlet
-fzf   模糊查看
+fzf   模糊查找
 
 
 ### editor & version
@@ -28,9 +29,13 @@ meld
 atom 
 
 ### 编译构建
-cmake     
-cmake-gui        
+pcl 1.8.1
+boost 1.58
+cmake 3.7  
+cmake-gui     3.7   
 clion    C++ IDE
+
+catkin_toolsROS
 
 ### 浏览器
 chrome  
@@ -40,7 +45,7 @@ switch
 wps       
 foxit reader     
 sogou pinyin        
-Shutter   截图i
+Shutter   截图
 GIMP  图片
 
 
@@ -70,7 +75,7 @@ GIMP  图片
     4.查看硬盘参数信息：                                    $sudo hdparm -i /dev/had
 四、网络信息
     1.查看网络接口信息：                                    $ifconfig
-    2.查看防火墙设置信息：                                $iptables -L
+    2.查看防火墙设置信息：                                $iptables -LS
     3.查看路由表信息：                                       $route -n
     4.查看所有监听端口的信息：                         $netstat -lntp
     5.查看所有已建立的连接的信息：                  $netstat -antp

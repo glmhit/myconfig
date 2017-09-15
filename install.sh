@@ -1,8 +1,14 @@
-
+# 删除libreoffice
+sudo apt-get remove libreoffice-*
 wget http://pinyin.sogou.com/linux/download.php?f=linux&bit=64
 sudo dpkg -i
 #chrome
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+### 开发工具 
+#### 终端
+
+
 
 #git 
 sudo apt-get install git git-flow git-doc
@@ -25,7 +31,10 @@ sudo apt-get install tmux terminator -y   nautilus-open-terminal
 sudo apt-get install tree meld -y
 https://code.visualstudio.com/docs/?dv=linux64_deb
 
+#ROS
+sudo pip install -U catkin_tools
+
 #办公 邮件
-sudo apt-get instal Kazam unity-mail 
+sudo apt-get install Kazam unity-mail  Remarkable
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
 
