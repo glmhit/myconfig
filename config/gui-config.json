@@ -1,0 +1,35 @@
+{
+    "configs": [
+        {
+            "method": "aes-256-cfb",
+            "password": "",
+            "remarks": "hk",
+            "server": "hk71.ssfvpn.com",
+            "server_port": 21527
+        },
+        {
+            "method": "aes-256-cfb",
+            "password": "",
+            "remarks": "us",
+            "server": "us72.ssfvpn.com",
+            "server_port": 21527
+        },
+	{
+            "method": "aes-256-cfb",
+            "password": "",
+            "remarks": "hk",
+            "server": "hk72.ssfvpn.com",
+            "server_port": 21527
+        },
+        {
+            "method": "aes-256-cfb",
+            "password": "",
+            "remarks": "us71",
+            "server": "us71.ssfvpn.com",
+            "server_port": 21527
+        }
+    ],
+    "localPort": 1080,
+    "shareOverLan": false
+}
+
