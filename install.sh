@@ -38,3 +38,6 @@ sudo pip install -U catkin_tools
 sudo apt-get install Kazam unity-mail  Remarkable
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
 
+#显卡
+sudo apt-get install nvidia-375-dev
+
