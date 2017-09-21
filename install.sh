@@ -23,7 +23,8 @@ sudo apt-get install python-pip -y
 sudo pip install powerline-status
 sudo apt-get install cmake3 cmake3-doc cmake3-curses-gui cmake3-qt-gui -y
 #gvim + spf13
-sudo apt-get install vim-gtk -y
+
+sudo apt-get install vim-gtk -y ctags
 curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 #tmux
 sudo apt-get install tmux terminator -y   nautilus-open-terminal
@@ -33,8 +34,12 @@ https://code.visualstudio.com/docs/?dv=linux64_deb
 
 #ROS
 sudo pip install -U catkin_tools
-
+# pcap
+sudo apt-get install flex
+sudo apt-get install  byacc -y
+sudo apt-get install libpcap-dev
 #办公 邮件
+
 sudo apt-get install Kazam unity-mail  Remarkable
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
 
