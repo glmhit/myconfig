@@ -96,6 +96,19 @@ alias gd='git diff'
 alias grh='git reset --hard'
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+
+alias grep="grep --color=auto"
+alias -s html='vim'   # 在命令行直接输入后缀为 html 的文件名，会在 Vim 中打开
+alias -s rb='vim'     # 在命令行直接输入 ruby 文件，会在 Vim 中打开
+alias -s py='vim'      # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
+alias -s js='vim'
+alias -s c='vim'
+alias -s java='vim'
+alias -s txt='vim'
+alias -s gz='tar -xzvf' # 在命令行直接输入后缀为 gz 的文件名，会自动解压打开
+alias -s tgz='tar -xzvf'
+alias -s zip='unzip'
+alias -s bz2='tar -xjvf'
 alias tmux='tmux -2'
 alias vi='vim'
 alias LS='ls'
@@ -103,8 +116,8 @@ alias clion='/opt/clion/bin/clion.sh'
 alias odir='gnome-open ./'
 source /opt/ros/indigo/setup.zsh
 
-source ~/workspace/catkin_ws_3/devel/setup.zsh
-source ~/workspace/catkin_ws_4/devel/setup.zsh
+source ~/workspace/catkin_ws/devel/setup.zsh
+#source ~/workspace/catkin_ws_4/devel/setup.zsh
 #source  ~/yuanqu_ws/devel/setup.zsh
 
 export LC_ALL=en_US.UTF-8  

@@ -1,18 +1,20 @@
 set autoindent
-set guifont=Courier\ 13
-nnoremap <Leader> ch :update<Bar>silent ! start %:p<CR>
+set guifont=Courier\ 12
+let autosave=1
+"nnoremap <Leader> ch :update<Bar>silent ! start %:p<CR>
 syntax enable
 "set background=dark
 "colorscheme solarized
 Plugin 'iamcco/mathjax-support-for-mkdp'
 Plugin 'iamcco/markdown-preview.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'taketwo/vim-ros'
 Plugin 'jalcine/cmake.vim'
-Plugin 'nickhutchinson/vim-make-syntax'
-"Plugin 'suan/vim-instant-markdown'
 Plugin 'ompugao/ros.vim'
-"filetype plugin on
+filetype on
+filetype plugin on
+set nocompatible
+set incsearch
 "let g:instant_markdown_autostart = 1
 "set shell=bash\ -i 
 
@@ -65,9 +67,9 @@ set tags+=/opt/ros/indigo/include/tags
 set tags+=/usr/include/eigen3/tags
 
 "YouCompleteMe 插件配置 
-let g:ycm_server_python_interpreter='/usr/bin/python'
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-let g:ycm_collect_identifiers_from_tags_files = 1
+"let g:ycm_server_python_interpreter='/usr/bin/python'
+"let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+"let g:ycm_collect_identifiers_from_tags_files = 1
 "Highlighting of class scope is disabled by default. To enable set
 
 let g:cpp_class_scope_highlight = 1
@@ -101,7 +103,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-Plugin 'powerline/powerline'
+
 
 
 
