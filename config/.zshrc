@@ -136,4 +136,6 @@ export LANG=en_US.UTF-8
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
+export QTDIR=/opt/qt57/5.7/gcc_64/lib/cmake/Qt5
+export PATH=/opt/qt57/5.7/gcc_64/bin/:$PATH
+export LD_LIBRARY_PATH=/opt/qt57/5.7/gcc_64/lib:$LD_LIBRARY_PATH  
