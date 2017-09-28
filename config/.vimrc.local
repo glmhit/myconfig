@@ -1,5 +1,6 @@
 set autoindent
-set guifont=Courier\ 12
+"set guifont=Courier\ 12
+set guifont=DejaVu\ Sans\ Mono\ 12
 let autosave=1
 "nnoremap <Leader> ch :update<Bar>silent ! start %:p<CR>
 syntax enable
@@ -7,7 +8,7 @@ syntax enable
 "colorscheme solarized
 Plugin 'iamcco/mathjax-support-for-mkdp'
 Plugin 'iamcco/markdown-preview.vim'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'taketwo/vim-ros'
 Plugin 'jalcine/cmake.vim'
 Plugin 'ompugao/ros.vim'
@@ -61,15 +62,16 @@ let b:undo_indent = "setl sw< ts< sts< et< tw< wrap< cin< cino< inde<"
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+set tags+=/usr/local/include/opencv2/tags
 set tags+=/usr/local/include/pcl-1.8/tags
 set tags+=/opt/ros/indigo/include/tags
 "set tags+=~/.vim/tagfiles/cpp_tags
 set tags+=/usr/include/eigen3/tags
 
 "YouCompleteMe 插件配置 
-"let g:ycm_server_python_interpreter='/usr/bin/python'
-"let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-"let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_collect_identifiers_from_tags_files = 1
 "Highlighting of class scope is disabled by default. To enable set
 
 let g:cpp_class_scope_highlight = 1
@@ -103,7 +105,6 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-
 
 
 
