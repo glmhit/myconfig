@@ -31,17 +31,28 @@ sudo apt-get install tmux terminator -y   nautilus-open-terminal
  
 sudo apt-get install tree meld -y
 https://code.visualstudio.com/docs/?dv=linux64_deb
+#编译环境
 
 #ROS
 sudo pip install -U catkin_tools
 # pcap
 sudo apt-get install flex
-sudo apt-get install  byacc -y
+sudo apt-get install byacc -y
 sudo apt-get install libpcap-dev
+
+
 #办公 邮件
 
 sudo apt-get install Kazam unity-mail  Remarkable
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
+
+#文档工具
+# Zetero
+sudo add-apt-repository ppa:smathot/cogscinl
+sudo apt-get update
+sudo apt-get install zotero-standalone
+#docear
+wget http://docear.org/downloads/docear_linux.tar.gz
 
 #显卡
 sudo apt-get install nvidia-375-dev
