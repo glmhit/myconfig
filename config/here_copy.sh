@@ -1,3 +1,5 @@
 #!/bin/bash
-cp ~/.zshrc ./
-cp  ~/.vimrc.local ./
+cp -v ~/.zshrc ./
+cp -v ~/.vimrc.local ./
+
+echo 'update finish'

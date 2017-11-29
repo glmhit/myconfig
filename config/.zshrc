@@ -117,7 +117,7 @@ alias odir='gnome-open ./'
 source /opt/ros/indigo/setup.zsh
 
 source ~/workspace/catkin_ws/devel/setup.zsh
-#source ~/workspace/catkin_ws_4/devel/setup.zsh
+source ~/workspace/catkin_ws_build/devel/setup.zsh
 #source  ~/yuanqu_ws/devel/setup.zsh
 
 export LC_ALL=en_US.UTF-8  
@@ -139,3 +139,4 @@ export LANG=en_US.UTF-8
 export QTDIR=/opt/qt57/5.7/gcc_64/lib/cmake/Qt5
 export PATH=/opt/qt57/5.7/gcc_64/bin/:$PATH
 export LD_LIBRARY_PATH=/opt/qt57/5.7/gcc_64/lib:$LD_LIBRARY_PATH  
+export EDITOR='gvim'

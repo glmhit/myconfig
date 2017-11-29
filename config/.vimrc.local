@@ -1,96 +1,173 @@
+set nocompatible                  " be iMproved, vundle required
+filetype off                      " vundle required 'off' 
+filetype plugin indent on         " vundle required
+"filetype plugin on                " 根据文件类型加载插件
+"set guifont=DejaVu\ Sans\ Mono\ 11 "等宽字体
+set guifont=YaHei\ Consolas\ Hybrid\ 12
+
+set history=2000                  "记录历史行数2000
+let g:syntastic_ignore_files=[".*\.py$"]
 set autoindent
-"set guifont=Courier\ 12
-set guifont=DejaVu\ Sans\ Mono\ 12
 let autosave=1
-"nnoremap <Leader> ch :update<Bar>silent ! start %:p<CR>
-syntax enable
-"set background=dark
-"colorscheme solarized
-Plugin 'iamcco/mathjax-support-for-mkdp'
-Plugin 'iamcco/markdown-preview.vim'
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'taketwo/vim-ros'
+set background=dark
+colorscheme solarized
+let g:rainbow_active = 1 "彩色括号
+set nowrap " 取消换行
+" 主题配置 solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+" 配色方案
+set background=dark
+set t_Co=256
+colorscheme solarized
+" 总是显示状态栏
+set laststatus=2
+" 状态行高度为2(默认为1)
+set cmdheight=2
+" 显示光标当前位置
+set ruler
+" 开启行号显示
+set number
+" 高亮显示当前行/列
+set cursorline
+set cursorcolumn
+""在状态栏显示正在输入的命令
+set showcmd"
+set winwidth=120
+set magic                   " 设置魔术
+set guioptions-=T           " 隐藏工具栏
+set guioptions-=m           " 隐藏菜单栏
+set shortmess=atI
+
+" ---------- install Plugin --------------------
+Plugin 'SirVer/ultisnips'
+Plugin 'iamcco/mathjax-support-for-mkdp'    "公式显示
+Plugin 'iamcco/markdown-preview.vim'        " markdown预览
+Plugin 'Valloric/YouCompleteMe'             "代码补全插件
 Plugin 'jalcine/cmake.vim'
-Plugin 'ompugao/ros.vim'
-filetype on
-filetype plugin on
-set nocompatible
-set incsearch
-"let g:instant_markdown_autostart = 1
-"set shell=bash\ -i 
+Plugin 'pboettch/vim-cmake-syntax'
+Plugin 'Chiel92/vim-autoformat'             "Format code with one button press
+Plugin 'vim-scripts/DoxygenToolkit.vim'     " doxygen"
+Plugin 'octol/vim-cpp-enhanced-highlight'
+"Plugin 'lilydjwg/fcitx.vim'                  "命令模式兼容中文
+Plugin 'taketwo/vim-ros'
+Plugin 'derekwyatt/vim-fswitch'
+Plugin 'derekwyatt/vim-protodef'
+Plugin 'taglist.vim'
+Plugin 'c.vim'
+Plugin 'OmniCppComplete'
+Plugin 'mizuchi/stl-syntax'
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+Plugin 'ybian/smartim' 
+Plugin 'jbohren/roslaunch.vim'
+"-------------YouCompleteMe-----------------------------------"
+let g:spf13_bundle_groups=['general', 'youcompleteme']
+""let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf=0      " 允许 vim 加载 .ycm_extra_conf.py 文件，不再提示  
+let g:ycm_collect_identifiers_from_tags_files = 1           " 开启 YCM 基于标签引擎
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释与字符串中的内容也用于补全
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
-let g:mkdp_path_to_chrome = "google-chrome"
-" path to the chrome or the command to open chrome(or other modern browsers)
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-let g:mkdp_auto_start = 1
-" set to 1, the vim will open the preview window once enter the markdown
-" buffer
+let g:ycm_complete_in_comments = 1                          " 在注释输入中也能补全
+let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
+let g:ycm_show_diagnostics_ui = 1                           " 使用语法检查
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>" |            " 回车即选中当前项
+nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|     " 跳转到定义处
+nmap <F4> :YcmDiags<CR>
+let g:ycm_semantic_triggers = {}
+let g:ycm_semantic_triggers.c = ['->', '.', '(', '[', '&']
 
-let g:mkdp_auto_open = 1
-" set to 1, the vim wh_while_loop auto open preview window when you edit the
-" markdown file
+" YCM 集成 OmniCppComplete 补全引擎，设置其快捷键  
+inoremap <leader>; <C-x><C-o>  
+" 补全内容不以分割子窗口形式出现，只显示补全列表  
+set completeopt-=preview  
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_cache_omnifunc=0  " 禁止缓存匹配项，每次都重新生成匹配项  
+let g:ycm_seed_identifiers_with_syntax=1   " 语法关键字补全              
+let g:ycm_key_invoke_completion = '<M-;>'  " 修改对C函数的补全快捷键，默认是CTRL + space，修改为ALT + ;  
+let g:ycm_error_symbol = '✗'    " 设置转到定义处的快捷键为ALT + G，这个功能非常赞 
+let g:ycm_warning_symbol = '>*'
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"======= for ros ======================="
 
-let g:mkdp_auto_close = 1
-" set to 1, the vim will auto close current preview window when change
-" from markdown buffer to another buffer
+let g:ycm_semantic_triggers = {
+ \ 'roslaunch' : ['="', '$(', '/'],
+ \ 'rosmsg,rossrv,rosaction' : ['re!^', '/'],
+ \ }
 
-let g:mkdp_refresh_slow = 0
-" set to 1, the vim will just refresh markdown when save the buffer or
-" leave from insert mode, default 0 is auto refresh markdown as you edit or
-" move the cursor
 
-let g:mkdp_command_for_global = 0
 
-let g:rainbow_active = 1
 
-set wrap
-"ROS formatting standards:
-set ts=2
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+"设置标记一列的背景颜色和数字一行颜色一致
+hi! link SignColumn   LineNr
+hi! link ShowMarksHLl DiffAdd
+hi! link ShowMarksHLu DiffChange
+
+"" for error highlight，防止错误整行标红导致看不清
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
+
+
+"---------------- airlinetheme --------"
+let airlinetheme="light"
+
+"------------------vim-airline---------------------
+let g:airline#extensions#tabline#enabled = 1    "Automatically displays all buffers when there's only one tab open
+
+"------------------EasyMotion------------------------------------"
+let g:EasyMotion_smartcase = 1
+"let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+" 重复上一次操作, 类似repeat插件, 很强大
+map <Leader><leader>. <Plug>(easymotion-repeat)
+
+"----------------NERDTREE -------------------------
+" 在 vim 启动的时候默认开启 NERDTree（autocmd 可以缩写为 au）
+"autocmd VimEnter * NERDTree     "当文件夹下文件很多时，载入费事
+" 当打开 NERDTree 窗口时，自动显示 Bookmarks
+let NERDTreeShowBookmarks=1
+
+
+"--------------------------ROS C++ code style----------------
+
+set ts            =2
+set shiftwidth    =2
+set tabstop       =2
+set softtabstop   =2
 set expandtab
-set textwidth=80
-
-"自动折叠
-setlocal wrap
-
+set textwidth     =150
 set cindent
-set cinoptions=2
-
+set cinoptions    =2
 let b:undo_indent = "setl sw< ts< sts< et< tw< wrap< cin< cino< inde<"
 
-Plugin 'octol/vim-cpp-enhanced-highlight'
 
-set tags+=/usr/local/include/opencv2/tags
-set tags+=/usr/local/include/pcl-1.8/tags
-set tags+=/opt/ros/indigo/include/tags
-"set tags+=~/.vim/tagfiles/cpp_tags
-set tags+=/usr/include/eigen3/tags
 
-"YouCompleteMe 插件配置 
-let g:ycm_server_python_interpreter='/usr/bin/python'
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-let g:ycm_collect_identifiers_from_tags_files = 1
-"Highlighting of class scope is disabled by default. To enable set
+setlocal nowrap        "自动折行
 
-let g:cpp_class_scope_highlight = 1
-"Highlighting of member variables is disabled by default. To enable set
 
-let g:cpp_member_variable_highlight = 1
-"Highlighting of class names in declarations is disabled by default. To enable set
-
-let g:cpp_class_decl_highlight = 1
-"There are two ways to hightlight template functions. Either
-
-let g:cpp_experimental_simple_template_highlight = 1
-
-"which works in most cases, but can be a little slow on large files. Alternatively set
-
-let g:cpp_experimental_template_highlight = 1
-
-Plugin 'pboettch/vim-cmake-syntax'
-" syntastic setup"
+"-------------syntastic-------------"
 " 设置错误符号
 let g:syntastic_error_symbol='✗'
 " 设置警告符号
@@ -102,9 +179,88 @@ let g:syntastic_check_on_wq=0
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
+let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+"高亮错误
+let g:syntastic_enable_highlighting=0
+"让syntastic支持C++11
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
+
+
+"-------------ctags------------------------
+set tags+=/usr/local/include/opencv2/tags
+set tags+=/usr/local/include/pcl-1.8/tags
+set tags+=/opt/ros/indigo/include/tags
+set tags+=/usr/include/eigen3/tags
+
+
+"----------------vim-autoformat-------------------------
+noremap <F3> :Autoformat<CR>     " "
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 1
+"clang-format for formating cpp code
+nnoremap <leader>cf :call FormatCode("Chromium")<cr>
+nnoremap <leader>lf :call FormatCode("LLVM")<cr>
+let g:autoformat_verbosemode = 1
+func FormatCode(style)
+  let firstline=line(".")
+  let lastline=line(".")
+  " Visual mode
+  if exists(a:firstline)
+    firstline = a:firstline
+    lastline = a:lastline
+  endif
+  let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=" . a:style . "'"
+  let formatcommand = ":" . firstline . "," . lastline . "Autoformat"
+  exec formatcommand
+endfunc
+
+
+
+"-------------doxygen--------------------------"
+let g:DoxygenToolkit_briefTag_pre="\\brief  "
+let g:DoxygenToolkit_paramTag_pre="\\param "
+let g:DoxygenToolkit_returnTag="\\return   "
+let g:DoxygenToolkit_authorName="guoleiming"
+let g:DoxygenToolkit_licenseTag=""  " <-- !!! Does not end with "\<enter>"
+let s:licenseTag = "Copyright(C) www.robosense.ai\<enter>"
+let s:licenseTag = s:licenseTag . "2017 Suteng Innovation Technology Co., Ltd..\<enter>"
+let s:licenseTag = s:licenseTag . "All right reserved\<enter>"
+let s:licenseTag = s:licenseTag . "版权声明\<enter>"
+let s:licenseTag = s:licenseTag . "速腾聚创公司对其发行的作品享有版权，受各国版权法及国际版权公约的保护。\<enter>"
+let s:licenseTag = s:licenseTag . "对于上述版权内容，超越合理使用范畴、并未经本公司书面许可的使用行为，我公司均保留追究法律责任的权利。\<enter>"
+let g:DoxygenToolkit_licenseTag = s:licenseTag
+let g:doxygen_enhanced_color=1
+
+
+
+
+
+
+
+"----------------markdown----------------------------"
+"let g:instant_markdown_autostart = 1
+let g:mkdp_path_to_chrome = "google-chrome"   " path to the chrome or the command to open chrome(or other modern browsers)
+let g:mkdp_auto_start = 0             " set to 1, the vim will open the preview window once enter the markdown  buffer
+let g:mkdp_auto_open = 0              " set to 1, the vim wh_while_loop auto open preview window when you edit the markdown file
+let g:mkdp_auto_close = 0             " set to 1, the vim will auto close current preview window when change from markdown buffer to another buffer
+let g:mkdp_refresh_slow = 0           " set to 1, the vim will just refresh markdown when save the buffer or leave from insert mode, default 0 is auto refresh markdown as you edit or move the cursor
+let g:mkdp_command_for_global = 0
+
+
+
+""vim-cpp-enhanced-highlight
+let g:cpp_class_scope_highlight = 1
+
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+let g:cpp_no_function_highlight = 1
+
 
 
 

@@ -9,8 +9,6 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 ### 开发工具 
 #### 终端
 
-
-
 #git 
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get updatet
@@ -25,6 +23,7 @@ sudo apt-get install python2.7-dev
 sudo apt-get install python-pip -y
 sudo pip install powerline-status
 sudo apt-get install cmake3 cmake3-doc cmake3-curses-gui cmake3-qt-gui -y
+
 #gvim + spf13
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
@@ -32,8 +31,12 @@ sudo apt install vim  ## vim8.0
 sudo apt-get install vim-gtk vim -y ctags
 curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 sudo apt install fonts-inconsolata
+
 #tmux
 sudo apt-get install tmux terminator -y   nautilus-open-terminal
+
+#gedit 插件
+sudo apt-get install gedit-plugins
  
 sudo apt-get install tree meld -y
 https://code.visualstudio.com/docs/?dv=linux64_deb
@@ -41,7 +44,7 @@ https://code.visualstudio.com/docs/?dv=linux64_deb
 #clang+llvm
 下载 clang+llvm-5.0.0-linux-x86_64-ubuntu14.04
 wget http://releases.llvm.org/5.0.0/clang+llvm-5.0.0-linux-x86_64-ubuntu14.04.tar.xz.sig
-解压
+#解压
 sudo cp -r * /usr 
 #ROS
 sudo pip install -U catkin_tools
@@ -62,14 +65,15 @@ sudo apt update
 sudo apt install nixnote2
 
 #文档工具
-# Zetero
+# Zetero   论文管理
 sudo add-apt-repository ppa:smathot/cogscinl
 sudo apt-get update
 sudo apt-get install zotero-standalone
+
 #docear
 wget http://docear.org/downloads/docear_linux.tar.gz
 
-#calibre
+#calibre 电子书管理
 sudo apt-get install calibre -y
 
 #显卡
