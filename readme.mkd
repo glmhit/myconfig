@@ -89,6 +89,7 @@ sogou pinyin | input
 Shutter      | 截图
 GIMP         | 图片
 网易云音乐   | 在线音乐
+kazam  | 视频
 
 
 

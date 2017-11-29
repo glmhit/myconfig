@@ -1,3 +1,4 @@
+#!/bin/bash
 # 删除libreoffice
 sudo apt-get remove libreoffice-*
 wget http://pinyin.sogou.com/linux/download.php?f=linux&bit=64
@@ -11,6 +12,8 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 
 #git 
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get updatet
 sudo apt-get install git git-flow git-doc
 
 # zsh
@@ -23,16 +26,23 @@ sudo apt-get install python-pip -y
 sudo pip install powerline-status
 sudo apt-get install cmake3 cmake3-doc cmake3-curses-gui cmake3-qt-gui -y
 #gvim + spf13
-
-sudo apt-get install vim-gtk -y ctags
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim  ## vim8.0
+sudo apt-get install vim-gtk vim -y ctags
 curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+sudo apt install fonts-inconsolata
 #tmux
 sudo apt-get install tmux terminator -y   nautilus-open-terminal
  
 sudo apt-get install tree meld -y
 https://code.visualstudio.com/docs/?dv=linux64_deb
 #编译环境
-
+#clang+llvm
+下载 clang+llvm-5.0.0-linux-x86_64-ubuntu14.04
+wget http://releases.llvm.org/5.0.0/clang+llvm-5.0.0-linux-x86_64-ubuntu14.04.tar.xz.sig
+解压
+sudo cp -r * /usr 
 #ROS
 sudo pip install -U catkin_tools
 # pcap
@@ -43,8 +53,13 @@ sudo apt-get install libpcap-dev
 
 #办公 邮件
 
-sudo apt-get install Kazam unity-mail  Remarkable
+sudo apt-get install Kazam unity-mail  Remarkable kazam
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
+
+##印象笔记
+sudo add-apt-repository ppa:nixnote/nixnote2-daily
+sudo apt update
+sudo apt install nixnote2
 
 #文档工具
 # Zetero
@@ -53,6 +68,9 @@ sudo apt-get update
 sudo apt-get install zotero-standalone
 #docear
 wget http://docear.org/downloads/docear_linux.tar.gz
+
+#calibre
+sudo apt-get install calibre -y
 
 #显卡
 sudo apt-get install nvidia-375-dev
