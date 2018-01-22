@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump python extract web-search)
+plugins=(gitfast autojump python extract web-search  zsh-syntax-highlighting  zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,29 +114,24 @@ alias vi='vim'
 alias LS='ls'
 alias clion='/opt/clion/bin/clion.sh'
 alias odir='gnome-open ./'
+alias ter='nohup terminator &'
 source /opt/ros/indigo/setup.zsh
-
 source ~/workspace/catkin_ws/devel/setup.zsh
 source ~/workspace/catkin_ws_build/devel/setup.zsh
-#source  ~/yuanqu_ws/devel/setup.zsh
+#source ~/workspace/catkin_ws/install/setup.zsh
+
 
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
+#export CUDA_HOME=/usr/local/cuda
+#export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
+#PATH=${CUDA_HOME}/bin:${PATH} 
+
 
 #export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-#g++找到头文件的路径
-#CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/local/boost_1_58_0/include
-#export CPLUS_INCLUDE_PATH
 
-#gcc找到头文件的路径
-#C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/boost_1_58_0/include
-#export C_INCLUDE_PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export QTDIR=/opt/qt57/5.7/gcc_64/lib/cmake/Qt5
-export PATH=/opt/qt57/5.7/gcc_64/bin/:$PATH
-export LD_LIBRARY_PATH=/opt/qt57/5.7/gcc_64/lib:$LD_LIBRARY_PATH  
-export EDITOR='gvim'
