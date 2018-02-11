@@ -20,8 +20,14 @@ chsh -s /bin/zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
 sudo apt-get install python2.7-dev
 sudo apt-get install python-pip -y
+sudo apt-get install python3.4-dev python3-pip -y
+sudo apt-get install libatlas-dev liblapack-dev gfortran
+sudo pip2 install numpy scipy matplotlib
+
+
 sudo pip install powerline-status
 sudo apt-get install cmake3 cmake3-doc cmake3-curses-gui cmake3-qt-gui -y
 
@@ -65,6 +71,8 @@ sudo add-apt-repository ppa:nixnote/nixnote2-daily
 sudo apt update
 sudo apt install nixnote2
 
+## 百度云
+sudo pip install bypy
 #文档工具
 # Zetero   论文管理
 sudo add-apt-repository ppa:smathot/cogscinl
