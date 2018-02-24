@@ -79,6 +79,10 @@ sudo add-apt-repository ppa:smathot/cogscinl
 sudo apt-get update
 sudo apt-get install zotero-standalone
 
+## utopia-documents
+wget -O- http://neuro.debian.net/lists/trusty.cn-zj.full | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list
+sudo apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9
+sudo apt-get install utopia-documents
 #docear
 wget http://docear.org/downloads/docear_linux.tar.gz
 
