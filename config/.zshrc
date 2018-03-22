@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast autojump python extract web-search  zsh-syntax-highlighting  zsh-autosuggestions)
+plugins=(gitfast autojump python extract web-search  zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,7 +100,7 @@ alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 alias grep="grep --color=auto"
 alias -s html='vim'   # 在命令行直接输入后缀为 html 的文件名，会在 Vim 中打开
 alias -s rb='vim'     # 在命令行直接输入 ruby 文件，会在 Vim 中打开
-alias -s py='vim'      # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
+##alias -s py='vim'      # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
 alias -s js='vim'
 alias -s c='vim'
 alias -s java='vim'
@@ -114,16 +114,21 @@ alias vi='vim'
 alias LS='ls'
 alias clion='/opt/clion/bin/clion.sh'
 alias odir='gnome-open ./'
-alias ter='nohup terminator &'
+alias ter='(terminator &)'
+alias bdup='bypy upload ~/baiduyun'
+alias cm='catkin_make'
+alias cb='catkin build'
 source /opt/ros/indigo/setup.zsh
 source ~/workspace/catkin_ws/devel/setup.zsh
 source ~/workspace/catkin_ws_build/devel/setup.zsh
 #source ~/workspace/catkin_ws/install/setup.zsh
+#
+#
 
 
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
-
+export PATH=$PATH:/usr/include/eigen3
 #export CUDA_HOME=/usr/local/cuda
 #export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
 #PATH=${CUDA_HOME}/bin:${PATH} 

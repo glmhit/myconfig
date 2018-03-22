@@ -52,7 +52,7 @@ Plugin 'Chiel92/vim-autoformat'             "Format code with one button press
 Plugin 'vim-scripts/DoxygenToolkit.vim'     " doxygen"
 Plugin 'octol/vim-cpp-enhanced-highlight'
 "Plugin 'lilydjwg/fcitx.vim'                  "命令模式兼容中文
-Plugin 'taketwo/vim-ros'
+"Plugin 'taketwo/vim-ros'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'taglist.vim'
@@ -62,7 +62,7 @@ Plugin 'mizuchi/stl-syntax'
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 Plugin 'ybian/smartim' 
-Plugin 'jbohren/roslaunch.vim'
+"Plugin 'jbohren/roslaunch.vim'
 "-------------YouCompleteMe-----------------------------------"
 let g:spf13_bundle_groups=['general', 'youcompleteme']
 ""let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
