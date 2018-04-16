@@ -92,3 +92,8 @@ sudo apt-get install calibre -y
 #显卡
 sudo apt-get install nvidia-375-dev
 
+#办公
+### 画图工具
+sudo apt-get install  kolourpaint4
+  
+
