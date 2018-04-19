@@ -48,11 +48,22 @@ sudo apt-get install gedit-plugins
 sudo apt-get install tree meld -y
 https://code.visualstudio.com/docs/?dv=linux64_deb
 #编译环境
-#clang+llvm
+###clang+llvm
 下载 clang+llvm-5.0.0-linux-x86_64-ubuntu14.04
 wget http://releases.llvm.org/5.0.0/clang+llvm-5.0.0-linux-x86_64-ubuntu14.04.tar.xz.sig
-#解压
 sudo cp -r * /usr 
+
+# CPP tools
+####cppcheck 
+cd ~/
+git clone https://github.com/danmar/cppcheck.github
+cd cppcheck
+mkdir buidl
+cmake ../
+make
+sudo make install
+#---------------
+
 #ROS
 sudo pip install -U catkin_tools
 # pcap
