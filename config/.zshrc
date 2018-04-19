@@ -119,8 +119,8 @@ alias bdup='bypy upload ~/baiduyun'
 alias cm='catkin_make'
 alias cb='catkin build'
 source /opt/ros/indigo/setup.zsh
-source ~/workspace/catkin_ws/devel/setup.zsh
-source ~/workspace/catkin_ws_build/devel/setup.zsh
+#source ~/workspace/catkin_ws/devel/setup.zsh
+#source ~/workspace/catkin_ws_build/devel/setup.zsh
 #source ~/workspace/catkin_ws/install/setup.zsh
 #
 #
@@ -139,4 +139,7 @@ export PATH=$PATH:/usr/include/eigen3
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+# 终端翻墙
+alias fanqiang=export http_proxy=http://127.0.0.1:34120 ; https_proxy=http://127.0.0.1:34120 
+#export http_proxy=http://127.0.0.1:34120
+#export https_proxy=http://127.0.0.1:34120
