@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings name="installedAddons" xmlns="urn:mathworks.matlab.settings" xsi:schemaLocation="urn:mathworks.matlab.settings settings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <settings name="artifact_36d50002_96ae_49d9_91a1_bfb29c2b0027" visible="true">
+        <key name="enabled">
+            <bool>
+                <value>1</value>
+            </bool>
+        </key>
+        <key name="javaClassPathEntries">
+            <string minArraySize="0" maxArraySize="0">
+            </string>
+        </key>
+        <key name="matlabPathEntries">
+            <string minArraySize="0" maxArraySize="13">
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/Encoder Simulation_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/Line Sensor Simulation_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/Motor_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/RealTimeSlower]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/Robot Simulator_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/To VW_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/To wlwr_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/MobileRoboticsTrainingLibrary/Ultrasonic Sensor Simulation_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/simulationMapGenerator]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/simulationMapGenerator/Simulation Map Generator Doc_files]]></value>
+                <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/simulationMapGenerator/Simulation Map Generator_resources]]></value>
+            </string>
+        </key>
+    </settings>
+    <settings name="artifact_90638da2_703f_425d_8171_49fb9a130845" visible="true">
+        <key name="enabled">
+            <bool>
+                <value>1</value>
+            </bool>
+        </key>
+        <key name="javaClassPathEntries">
+            <string minArraySize="0" maxArraySize="0">
+            </string>
+        </key>
+        <key name="matlabPathEntries">
+            <string minArraySize="0" maxArraySize="0">
+            </string>
+        </key>
+    </settings>
+</settings>

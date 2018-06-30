@@ -2,7 +2,7 @@
 # export PATH=/usr/local/boost_1_58_0:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/robosense/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -118,7 +118,7 @@ alias ter='(terminator &)'
 alias bdup='bypy upload ~/baiduyun'
 alias cm='catkin_make'
 alias cb='catkin build'
-source /opt/ros/indigo/setup.zsh
+source /opt/ros/kinetic/setup.zsh
 #source ~/workspace/catkin_ws/devel/setup.zsh
 #source ~/workspace/catkin_ws_build/devel/setup.zsh
 #source ~/workspace/catkin_ws/install/setup.zsh
@@ -139,7 +139,8 @@ export PATH=$PATH:/usr/include/eigen3
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+LC_CTYPE="zh_CN.utf8"
 # 终端翻墙
-alias fanqiang=export http_proxy=http://127.0.0.1:34120 ; https_proxy=http://127.0.0.1:34120 
+#alias fanqiang=export http_proxy=http://127.0.0.1:34120  export https_proxy=http://127.0.0.1:34120 
 #export http_proxy=http://127.0.0.1:34120
 #export https_proxy=http://127.0.0.1:34120

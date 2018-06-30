@@ -1,8 +1,12 @@
 #!/bin/bash
 # 删除libreoffice
+sudo add-apt-repository ppa:nemh/systemback
+sudo apt-get update
 sudo apt-get remove libreoffice-*
 wget http://pinyin.sogou.com/linux/download.php?f=linux&bit=64
 sudo dpkg -i
+#systemback
+sudo apt-get install systemback
 #chrome
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
@@ -78,6 +82,8 @@ sudo apt-get install libpcap-dev
 sudo apt-get install Kazam unity-mail  Remarkable kazam
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
 
+#dict
+sudo apt-get install goldendict
 ##印象笔记
 sudo add-apt-repository ppa:nixnote/nixnote2-daily
 sudo apt update
@@ -106,6 +112,6 @@ sudo apt-get install nvidia-375-dev
 
 #办公
 ### 画图工具
-sudo apt-get install  kolourpaint4
+sudo apt-get install  kolourpaint4 shutter
   
 
