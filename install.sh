@@ -16,7 +16,9 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 #git 
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get updatet
-sudo apt-get install git git-flow git-doc
+sudo apt-get install git git-flow git-doc meld
+git config --global diff.tool meld #配置默认的difftool
+git config --global merge.tool meld #配置默认的mergetool
 
 # zsh
 sudo apt-get install zsh
