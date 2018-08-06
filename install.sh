@@ -78,7 +78,8 @@ sudo apt-get install flex
 sudo apt-get install byacc -y
 sudo apt-get install libpcap-dev
 
-
+#性能分析工具
+sudo apt-get install valgrind  kcachegrind
 #办公 邮件
 
 sudo apt-get install Kazam unity-mail  Remarkable kazam
@@ -115,5 +116,8 @@ sudo apt-get install nvidia-375-dev
 #办公
 ### 画图工具
 sudo apt-get install  kolourpaint4 shutter
+
+# 命令行工具
+sudo apt-get install trash-cli
   
 
