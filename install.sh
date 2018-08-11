@@ -9,6 +9,10 @@ sudo dpkg -i
 sudo apt-get install systemback
 #chrome
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+#node  npm
+sudo apt-get install nodejs-legacy npm
+sudo npm install -g n
+
 
 ### 开发工具 
 #### 终端
