@@ -57,8 +57,8 @@
             </key>
             <key name="Position">
                 <double minArraySize="4" maxArraySize="4">
-                    <value>2066.0</value>
-                    <value>141.0</value>
+                    <value>410.0</value>
+                    <value>-171.0</value>
                     <value>1280.0</value>
                     <value>779.0</value>
                 </double>
@@ -462,8 +462,11 @@
             </key>
             <key name="History">
                 <string minArraySize="0" maxArraySize="500">
-                    <value><![CDATA[/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU]]></value>
                     <value><![CDATA[/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU/Gait Tracking With x-IMU]]></value>
+                    <value><![CDATA[/home/glm/workspace/matlab]]></value>
+                    <value><![CDATA[/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU]]></value>
+                    <value><![CDATA[/home/glm/workspace/matlab/madgwick_algorithm_matlab]]></value>
+                    <value><![CDATA[/home/glm/opt/MATLAB/R2018a/bin]]></value>
                     <value><![CDATA[/home/glm/workspace/analysis_file]]></value>
                     <value><![CDATA[/home/glm/workspace/analysis_file/doc]]></value>
                     <value><![CDATA[/home/glm/workspace/analysis_file/doc/guider.assets]]></value>
@@ -477,11 +480,8 @@
                     <value><![CDATA[/home/glm/opt/MATLAB/R2018a]]></value>
                     <value><![CDATA[/home/glm/workspace/analysis_file/0619]]></value>
                     <value><![CDATA[/media/glm/SB@home/robosense/RSlidar_Data/calibrate/sample/average-quaternions/matlab]]></value>
-                    <value><![CDATA[/home/glm/workspace/matlab]]></value>
                     <value><![CDATA[/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU/Gait Tracking With x-IMU/ximu_matlab_library]]></value>
                     <value><![CDATA[/home/glm/Documents/MATLAB/Examples/signal/LowpassButterworthTransferFunctionExample]]></value>
-                    <value><![CDATA[/home/glm/workspace/matlab/madgwick_algorithm_matlab]]></value>
-                    <value><![CDATA[/]]></value>
                 </string>
             </key>
             <key name="HistorySize">
@@ -542,8 +542,8 @@
                 <key name="ColumnSizes">
                     <string minArraySize="0" maxArraySize="100000">
                         <value><![CDATA[40]]></value>
-                        <value><![CDATA[511]]></value>
-                        <value><![CDATA[46]]></value>
+                        <value><![CDATA[381]]></value>
+                        <value><![CDATA[40]]></value>
                         <value><![CDATA[0]]></value>
                         <value><![CDATA[0]]></value>
                         <value><![CDATA[0]]></value>
@@ -578,7 +578,6 @@
                     <string minArraySize="0" maxArraySize="100">
                         <value><![CDATA[icon]]></value>
                         <value><![CDATA[name]]></value>
-                        <value><![CDATA[status]]></value>
                     </string>
                 </key>
             </settings>
@@ -1404,7 +1403,7 @@
         </key>
         <key name="LastFolderPath">
             <string>
-                <value><![CDATA[/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU]]></value>
+                <value><![CDATA[/home/glm/opt/MATLAB/R2018a/bin]]></value>
             </string>
         </key>
     </settings>

@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings name="installedAddons" xmlns="urn:mathworks.matlab.settings" xsi:schemaLocation="urn:mathworks.matlab.settings settings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <settings name="artifact_2704f473_2803_4295_a105_9606580aa92f" visible="true">
+        <key name="enabled">
+            <bool>
+                <value>1</value>
+            </bool>
+        </key>
+        <key name="javaClassPathEntries">
+            <string minArraySize="0" maxArraySize="0">
+            </string>
+        </key>
+        <key name="matlabPathEntries">
+            <string minArraySize="0" maxArraySize="0">
+            </string>
+        </key>
+    </settings>
     <settings name="artifact_36d50002_96ae_49d9_91a1_bfb29c2b0027" visible="true">
         <key name="enabled">
             <bool>
@@ -25,6 +40,21 @@
                 <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/simulationMapGenerator]]></value>
                 <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/simulationMapGenerator/Simulation Map Generator Doc_files]]></value>
                 <value><![CDATA[/home/glm/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Training Toolbox/code/simulationMapGenerator/Simulation Map Generator_resources]]></value>
+            </string>
+        </key>
+    </settings>
+    <settings name="artifact_7a47cc55_d855_4b8f_ac02_efeb973735ba" visible="true">
+        <key name="enabled">
+            <bool>
+                <value>1</value>
+            </bool>
+        </key>
+        <key name="javaClassPathEntries">
+            <string minArraySize="0" maxArraySize="0">
+            </string>
+        </key>
+        <key name="matlabPathEntries">
+            <string minArraySize="0" maxArraySize="0">
             </string>
         </key>
     </settings>
