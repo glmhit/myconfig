@@ -119,11 +119,8 @@ alias bdup='bypy upload ~/baiduyun'
 alias cm='catkin_make'
 alias cb='catkin build'
 source /opt/ros/kinetic/setup.zsh
-#source ~/workspace/catkin_ws/devel/setup.zsh
-#source ~/workspace/catkin_ws_build/devel/setup.zsh
-#source ~/workspace/catkin_ws/install/setup.zsh
-#
-#
+source ~/workspace/catkin_ws/devel/setup.zsh
+alias rm="trash"
 
 
 export LC_ALL=en_US.UTF-8  
@@ -135,12 +132,12 @@ export PATH=$PATH:/usr/include/eigen3
 
 
 #export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-
-
-
+ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=localhost
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 LC_CTYPE="zh_CN.utf8"
 # 终端翻墙
 #alias fanqiang=export http_proxy=http://127.0.0.1:34120  export https_proxy=http://127.0.0.1:34120 
 #export http_proxy=http://127.0.0.1:34120
 #export https_proxy=http://127.0.0.1:34120
+source /opt/ros/kinetic/setup.zsh
