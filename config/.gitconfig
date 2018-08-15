@@ -3,3 +3,14 @@
 [user]
 	email = lmguo@robosense.cn
 	name = guoleiming
+[diff]
+	guitool = meld
+	tool = meld
+[difftool]
+	prompt = false
+[merge]
+	tool = meld
+[http]
+	sslVerify = false
+[commit]
+	template = /home/glm/.gitmessage.txt
