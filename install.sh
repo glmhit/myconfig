@@ -73,6 +73,7 @@ mkdir build
 cmake ../
 make
 sudo make install
+sudo pip install cmake_format
 #---------------
 
 #ROS
