@@ -114,7 +114,7 @@ alias vi='vim'
 alias LS='ls'
 alias clion='/opt/clion/bin/clion.sh'
 alias odir='gnome-open ./'
-alias ter='(terminator &)'
+alias ter='(terminator &)'  # 打开终端
 alias bdup='bypy upload ~/baiduyun'
 alias cm='catkin_make'
 alias cb='catkin build'
@@ -134,6 +134,7 @@ export PATH=$PATH:/usr/include/eigen3
 #export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 ROS_MASTER_URI=http://localhost:11311
 export ROS_HOSTNAME=localhost
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 LC_CTYPE="zh_CN.utf8"
 # 终端翻墙

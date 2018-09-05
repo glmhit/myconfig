@@ -1,4 +1,4 @@
-     :
+
 #feat: change not changed or changes, don't capitalize first letter, no dot (.) at the end
 #What happened.
 #Close #10, #11, #12

@@ -1,6 +1,6 @@
-set nocompatible                  " be iMproved, vundle required
 filetype off                      " vundle required 'off' 
 filetype plugin indent on         " vundle required
+set nocompatible                  " be iMproved, vundle required
 "filetype plugin on                " 根据文件类型加载插件
 "set guifont=DejaVu\ Sans\ Mono\ 11 "等宽字体
  set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -55,19 +55,28 @@ Plugin 'Chiel92/vim-autoformat'             "Format code with one button press
 Plugin 'vim-scripts/DoxygenToolkit.vim'     " doxygen"
 Plugin 'octol/vim-cpp-enhanced-highlight'
 "Plugin 'lilydjwg/fcitx.vim'                  "命令模式兼容中文
-"Plugin 'taketwo/vim-ros'
+"Plugin 'taketwo/vim-ros'                     "Vim with +python is required
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'taglist.vim'
 Plugin 'c.vim'
 Plugin 'OmniCppComplete'
 Plugin 'mizuchi/stl-syntax'
-" 让配置变更立即生效
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
 Plugin 'ybian/smartim' 
 Plugin 'jbohren/roslaunch.vim'
 Plugin 'ianva/vim-youdao-translater'
+Plugin 'kana/vim-operator-user'
+Plugin 'rhysd/vim-clang-format'
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "-------------YouCompleteMe-----------------------------------"
+"
+"" YCM 补全菜单配色
+" 菜单
+highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
+" 选中项
+highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 let g:spf13_bundle_groups=['general', 'youcompleteme']
 ""let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0      " 允许 vim 加载 .ycm_extra_conf.py 文件，不再提示  
@@ -161,7 +170,7 @@ set shiftwidth    =2
 set tabstop       =2
 set softtabstop   =2
 set expandtab
-set textwidth     =150
+set textwidth     =120
 set cindent
 set cinoptions    =2
 let b:undo_indent = "setl sw< ts< sts< et< tw< wrap< cin< cino< inde<"
@@ -193,33 +202,43 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 
 
 "-------------ctags------------------------
-set tags+=/usr/local/include/opencv2/tags
-set tags+=/usr/local/include/pcl-1.8/tags
-set tags+=/opt/ros/indigo/include/tags
-set tags+=/usr/include/eigen3/tags
-
+set tags+=~/.ctags/opencv
+set tags+=~/.ctags/pcl
+set tags+=~/.ctags/ros
+set tags+=~/.ctags/eigen
+set path+=/usr/include/pcl-1.7
+set path+=/usr/include/opencv2
+set path+=/opt/ros/kinetic/include
+set path+=/usr/include/c++/5
+autocmd BufEnter * silent! lcd %:p:h
 
 "----------------vim-autoformat-------------------------
 noremap <F3> :Autoformat<CR>     " "
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 1
+
+
+
 "clang-format for formating cpp code
-nnoremap <leader>cf :call FormatCode("Chromium")<cr>
-nnoremap <leader>lf :call FormatCode("LLVM")<cr>
-let g:autoformat_verbosemode = 1
-func FormatCode(style)
-  let firstline=line(".")
-  let lastline=line(".")
-  " Visual mode
-  if exists(a:firstline)
-    firstline = a:firstline
-    lastline = a:lastline
-  endif
-  let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=" . a:style . "'"
-  let formatcommand = ":" . firstline . "," . lastline . "Autoformat"
-  exec formatcommand
-endfunc
+" map to <Leader>cf in C++ code
+let g:clang_format#detect_style_file  = 1
+let g:clang_format#auto_format =1 
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+"let g:autoformat_verbosemode = 1
+"func FormatCode(style)
+"  let firstline=line(".")
+"  let lastline=line(".")
+"  " Visual mode
+"  if exists(a:firstline)
+"    firstline = a:firstline
+"    lastline = a:lastline
+"  endif
+"  let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=" . a:style . "'"
+"  let formatcommand = ":" . firstline . "," . lastline . "Autoformat"
+"  exec formatcommand
+"endfunc
 
 
 
@@ -229,11 +248,11 @@ let g:DoxygenToolkit_paramTag_pre="\\param "
 let g:DoxygenToolkit_returnTag="\\return   "
 let g:DoxygenToolkit_authorName="guoleiming"
 let g:DoxygenToolkit_licenseTag=""  " <-- !!! Does not end with "\<enter>"
-let s:licenseTag = "Copyright(C) www.robosense.ai\<enter>"
-let s:licenseTag = s:licenseTag . "2017 Suteng Innovation Technology Co., Ltd..\<enter>"
+let s:licenseTag = "Copyright(C) www.rob.ai\<enter>"
+let s:licenseTag = s:licenseTag . "2017  Technology Co., Ltd..\<enter>"
 let s:licenseTag = s:licenseTag . "All right reserved\<enter>"
 let s:licenseTag = s:licenseTag . "版权声明\<enter>"
-let s:licenseTag = s:licenseTag . "速腾聚创公司对其发行的作品享有版权，受各国版权法及国际版权公约的保护。\<enter>"
+let s:licenseTag = s:licenseTag . "公司对其发行的作品享有版权，受各国版权法及国际版权公约的保护。\<enter>"
 let s:licenseTag = s:licenseTag . "对于上述版权内容，超越合理使用范畴、并未经本公司书面许可的使用行为，我公司均保留追究法律责任的权利。\<enter>"
 let g:DoxygenToolkit_licenseTag = s:licenseTag
 let g:doxygen_enhanced_color=1
@@ -259,6 +278,9 @@ imap <silent> <F9> <Plug>StopMarkdownPreview    " for insert mode
 
 
 ""vim-cpp-enhanced-highlight
+augroup filetypedetect
+    au BufRead,BufNewFile *.cc set filetype=cpp
+augroup END
 let g:cpp_class_scope_highlight = 1
 
 let g:cpp_member_variable_highlight = 1
@@ -269,11 +291,12 @@ let g:cpp_concepts_highlight = 1
 let g:cpp_no_function_highlight = 1
 
 
-" youdao translater
+" youdao translater  有道词典
 vnoremap <silent> <C-T> :<C-u>Ydv<CR>
 nnoremap <silent> <C-T> :<C-u>Ydc<CR>
 noremap <leader>yd :<C-u>Yde<CR>
-xnoremap p pgvy
+
+xnoremap p pgvy   " 多次粘贴
 
 
 

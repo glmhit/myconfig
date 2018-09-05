@@ -14,3 +14,5 @@
 	sslVerify = false
 [commit]
 	template = /home/glm/.gitmessage.txt
+[init]
+	templatedir = /home/glm/.git/gittemple
