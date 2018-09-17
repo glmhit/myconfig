@@ -8,11 +8,11 @@
  * To make a manual change to preferences, you can visit the URL about:config
  */
 
-user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1536111491);
-user_pref("app.update.lastUpdateTime.background-update-timer", 1536111731);
-user_pref("app.update.lastUpdateTime.blocklist-background-update-timer", 1536111611);
-user_pref("app.update.lastUpdateTime.search-engine-update-timer", 1536111371);
-user_pref("app.update.lastUpdateTime.xpi-signature-verification", 1535378786);
+user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1536799963);
+user_pref("app.update.lastUpdateTime.background-update-timer", 1536799603);
+user_pref("app.update.lastUpdateTime.blocklist-background-update-timer", 1536800083);
+user_pref("app.update.lastUpdateTime.search-engine-update-timer", 1536799723);
+user_pref("app.update.lastUpdateTime.xpi-signature-verification", 1536799843);
 user_pref("app.update.postupdate", true);
 user_pref("browser.cache.disk.capacity", 358400);
 user_pref("browser.cache.disk.filesystem_reported", 1);
@@ -42,7 +42,7 @@ user_pref("extensions.zotero.firstRun.skipFirefoxProfileAccessCheck", true);
 user_pref("extensions.zotero.firstRun2", false);
 user_pref("extensions.zotero.ignoreLegacyDataDir.auto", true);
 user_pref("extensions.zotero.lastAbstractExpand", false);
-user_pref("extensions.zotero.lastViewedFolder", "C20");
+user_pref("extensions.zotero.lastViewedFolder", "L1");
 user_pref("extensions.zotero.pane.persist", "{\"zotero-collections-pane\":{},\"zotero-tags-splitter\":{},\"zotero-tag-selector\":{\"height\":\"0\"},\"zotero-collections-splitter\":{},\"zotero-layout-switcher\":{\"orient\":\"horizontal\"},\"zotero-items-pane\":{},\"zotero-items-tree\":{\"current-view-group\":\"default\"},\"zotero-items-column-title\":{\"width\":\"348\",\"ordinal\":\"1\",\"hidden\":\"false\"},\"zotero-items-column-firstCreator\":{\"width\":\"164\",\"ordinal\":\"3\",\"hidden\":\"false\"},\"zotero-items-column-itemType\":{\"width\":\"40\",\"ordinal\":\"5\",\"hidden\":\"true\"},\"zotero-items-column-date\":{\"ordinal\":\"7\",\"hidden\":\"true\"},\"zotero-items-column-year\":{\"ordinal\":\"9\",\"hidden\":\"true\"},\"zotero-items-column-publisher\":{\"ordinal\":\"11\",\"hidden\":\"true\"},\"zotero-items-column-publicationTitle\":{\"ordinal\":\"13\",\"hidden\":\"true\"},\"zotero-items-column-journalAbbreviation\":{\"ordinal\":\"15\",\"hidden\":\"true\"},\"zotero-items-column-language\":{\"ordinal\":\"17\",\"hidden\":\"true\"},\"zotero-items-column-accessDate\":{\"ordinal\":\"19\",\"hidden\":\"true\"},\"zotero-items-column-libraryCatalog\":{\"ordinal\":\"21\",\"hidden\":\"true\"},\"zotero-items-column-callNumber\":{\"ordinal\":\"23\",\"hidden\":\"true\"},\"zotero-items-column-rights\":{\"ordinal\":\"25\",\"hidden\":\"true\"},\"zotero-items-column-dateAdded\":{\"ordinal\":\"27\",\"hidden\":\"true\"},\"zotero-items-column-dateModified\":{\"width\":\"251\",\"ordinal\":\"29\",\"hidden\":\"false\",\"sortActive\":\"true\",\"sortDirection\":\"ascending\"},\"zotero-items-column-archive\":{\"ordinal\":\"31\",\"hidden\":\"true\"},\"zotero-items-column-archiveLocation\":{\"ordinal\":\"33\",\"hidden\":\"true\"},\"zotero-items-column-place\":{\"ordinal\":\"35\",\"hidden\":\"true\"},\"zotero-items-column-volume\":{\"ordinal\":\"37\",\"hidden\":\"true\"},\"zotero-items-column-edition\":{\"ordinal\":\"39\",\"hidden\":\"true\"},\"zotero-items-column-pages\":{\"ordinal\":\"41\",\"hidden\":\"true\"},\"zotero-items-column-issue\":{\"ordinal\":\"43\",\"hidden\":\"true\"},\"zotero-items-column-series\":{\"ordinal\":\"45\",\"hidden\":\"true\"},\"zotero-items-column-seriesTitle\":{\"ordinal\":\"47\",\"hidden\":\"true\"},\"zotero-items-column-court\":{\"ordinal\":\"49\",\"hidden\":\"true\"},\"zotero-items-column-medium\":{\"ordinal\":\"51\",\"hidden\":\"true\"},\"zotero-items-column-genre\":{\"ordinal\":\"53\",\"hidden\":\"true\"},\"zotero-items-column-system\":{\"ordinal\":\"55\",\"hidden\":\"true\"},\"zotero-items-column-extra\":{\"ordinal\":\"57\",\"hidden\":\"true\"},\"zotero-items-column-hasAttachment\":{\"ordinal\":\"59\",\"hidden\":\"false\"},\"zotero-items-column-numNotes\":{\"ordinal\":\"61\",\"hidden\":\"true\"},\"zotero-items-splitter\":{\"orient\":\"horizontal\"},\"zotero-item-pane\":{}}");
 user_pref("extensions.zotero.prefVersion", 2);
 user_pref("extensions.zotero.purge.tags", true);
@@ -61,14 +61,14 @@ user_pref("extensions.zotfile.source_dir_ff", false);
 user_pref("extensions.zotfile.version", "5.0.8");
 user_pref("font.internaluseonly.changed", true);
 user_pref("general.useragent.locale", "en-US");
-user_pref("idle.lastDailyNotification", 1536111779);
+user_pref("idle.lastDailyNotification", 1536800976);
 user_pref("intl.accept_languages", "en-US, en");
 user_pref("intl.locale.matchOS", false);
 user_pref("media.gmp.storage.version.observed", 1);
 user_pref("network.cookie.prefsMigrated", true);
 user_pref("network.predictor.cleaned-up", true);
-user_pref("places.database.lastMaintenance", 1533137065);
-user_pref("places.history.expiration.transient_current_max_pages", 115254);
+user_pref("places.database.lastMaintenance", 1536221245);
+user_pref("places.history.expiration.transient_current_max_pages", 122334);
 user_pref("services.sync.prefs.sync.extensions.markdown-here.forgot-to-render-check-enabled", true);
 user_pref("services.sync.prefs.sync.extensions.markdown-here.gfm-line-breaks-enabled", true);
 user_pref("services.sync.prefs.sync.extensions.markdown-here.header-anchors-enabled", true);
@@ -80,5 +80,5 @@ user_pref("services.sync.prefs.sync.extensions.markdown-here.math-enabled", true
 user_pref("services.sync.prefs.sync.extensions.markdown-here.math-value", true);
 user_pref("services.sync.prefs.sync.extensions.markdown-here.syntax-css", true);
 user_pref("signon.importedFromSqlite", true);
-user_pref("storage.vacuum.last.index", 0);
-user_pref("storage.vacuum.last.places.sqlite", 1532964265);
+user_pref("storage.vacuum.last.index", 1);
+user_pref("storage.vacuum.last.places.sqlite", 1536221245);

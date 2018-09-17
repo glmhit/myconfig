@@ -1,5 +1,5 @@
 #MATLAB Preferences
-#Tue Sep 04 21:47:27 CST 2018
+#Mon Sep 10 17:34:00 CST 2018
 com.mathworks.widgets.login.LoginProperties.lastName=SGuo
 EditorCodeBlockDividers=Btrue
 Editor.Language.XML.Color.pi-content=C-9670204
@@ -97,15 +97,7 @@ RLWidthB2_WB_2014b_1_1=I130
 Colors_M_SystemCommands=C-2935166
 RLWidthB2_WB_2014b_1_0=I130
 Colors_M_Errors=C-2346449
-EditorMRU8=S/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU/Gait Tracking With x-IMU/Quaternions/euler2rotMat.m
 ReplaceWordWrap=Btrue
-EditorMRU7=S/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU/Gait Tracking With x-IMU/logMatrix.m
-EditorMRU6=S/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU/Gait Tracking With x-IMU/imu_calibrate.mlx
-EditorMRU5=S/home/glm/workspace/matlab/Gait-Tracking-With-x-IMU/Gait Tracking With x-IMU/AHRS.m
-EditorMRU4=S/home/glm/workspace/mems.mlx
-EditorMRU3=S/home/glm/workspace/rslidar_calib/pcap2csv/csv_process.m
-EditorMRU2=S/home/glm/opt/MATLAB/R2018a/toolbox/stats/stats/boxplot.m
-EditorMRU1=S/home/glm/workspace/rslidar_calib/3dca/DistCorr_interp2.m
 RLPrevInitB2_WB_2014b_1=Btrue
 DelimiterOptionsTyping=Btrue
 Colors_M_Warnings=C-4880128
