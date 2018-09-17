@@ -12,6 +12,11 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 #node  npm
 sudo apt-get install nodejs-legacy npm
 sudo npm install -g n
+sudo apt-get install ecryptfs-utils
+
+#desktop syssteam
+sudo apt-get install  awesome 
+sudo apt-get install  i3 
 
 
 ### 开发工具 
@@ -41,6 +46,7 @@ sudo pip2 install numpy scipy matplotlib
 
 sudo pip install powerline-status
 sudo apt-get install cmake3 cmake3-doc cmake3-curses-gui cmake3-qt-gui -y
+sudo apt-get install powerline
 
 #gvim + spf13
 sudo add-apt-repository ppa:jonathonf/vim
@@ -73,7 +79,8 @@ mkdir build
 cmake ../
 make
 sudo make install
-sudo pip install cmake_format
+sudo pip install cmake_format  cppclean  cpplint
+sudo apt-get install clang-tidy
 #---------------
 
 #ROS
@@ -124,5 +131,8 @@ sudo apt-get install  kolourpaint4 shutter
 
 # 命令行工具
 sudo apt-get install trash-cli
+
+
+sudo apt-get install freecad
   
 
