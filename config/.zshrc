@@ -7,7 +7,10 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="random"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +54,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast autojump python extract web-search  zsh-syntax-highlighting)
+plugins=(gitfast autojump python sudo extract web-search  zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,7 +99,8 @@ alias gd='git diff'
 alias grh='git reset --hard'
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-
+#alias gvim="gvim --remote-silent || gvim"
+ gvim () { command gvim --remote-tab-silent "$@" || command gvim "$@"; }
 alias grep="grep --color=auto"
 alias -s html='vim'   # 在命令行直接输入后缀为 html 的文件名，会在 Vim 中打开
 alias -s rb='vim'     # 在命令行直接输入 ruby 文件，会在 Vim 中打开
@@ -117,7 +121,8 @@ alias odir='gnome-open ./'
 alias ter='(terminator &)'  # 打开终端
 alias bdup='bypy upload ~/baiduyun'
 alias cm='catkin_make'
-alias cb='catkin build'
+alias cb='catkin build'   # 默认debug模式
+alias cbr='catkin build --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo'
 source /opt/ros/kinetic/setup.zsh
 source ~/workspace/catkin_ws/devel/setup.zsh
 alias rm="trash"
@@ -134,7 +139,6 @@ export PATH=$PATH:/usr/include/eigen3
 #export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 ROS_MASTER_URI=http://localhost:11311
 export ROS_HOSTNAME=localhost
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 LC_CTYPE="zh_CN.utf8"
 # 终端翻墙
@@ -142,3 +146,5 @@ LC_CTYPE="zh_CN.utf8"
 #export http_proxy=http://127.0.0.1:34120
 #export https_proxy=http://127.0.0.1:34120
 source /opt/ros/kinetic/setup.zsh
+
+[[ -s /etc/profile.d/autojump.sh ]] && . /etc/profile.d/autojump.sh
