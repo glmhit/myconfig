@@ -3,10 +3,10 @@ filetype plugin indent on         " vundle required
 set nocompatible                  " be iMproved, vundle required
 "filetype plugin on                " 根据文件类型加载插件
 "set guifont=DejaVu\ Sans\ Mono\ 11 "等宽字体
- set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936  "自适应文件编码,防止中文乱码
  set termencoding=utf-8
  set encoding=utf-8
- set guifont=YaHei\ Consolas\ Hybrid\ 12
+ set guifont=YaHei\ Consolas\ Hybrid\ 12   "雅黑字体
 
 set history=2000                  "记录历史行数2000
 let g:syntastic_ignore_files=[".*\.py$"]
@@ -63,10 +63,14 @@ Plugin 'c.vim'
 Plugin 'OmniCppComplete'
 Plugin 'mizuchi/stl-syntax'
 Plugin 'ybian/smartim' 
-Plugin 'jbohren/roslaunch.vim'
+"Plugin 'jbohren/roslaunch.vim'
 Plugin 'ianva/vim-youdao-translater'
 Plugin 'kana/vim-operator-user'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'mhinz/vim-startify'
+Plugin 'spolu/dwm.vim'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'tpope/vim-ragtag'
 
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
@@ -121,6 +125,7 @@ let g:ycm_semantic_triggers = {
  \ 'rosmsg,rossrv,rosaction' : ['re!^', '/'],
  \ }
 
+au! BufRead,BufNewFile *.launch set filetype=xml
 
 
 
@@ -141,10 +146,12 @@ highlight SpellLocal term=underline cterm=underline
 
 
 "---------------- airlinetheme --------"
-let airlinetheme="light"
+let airlinetheme='luna'   "light
 
-"------------------vim-airline---------------------
 let g:airline#extensions#tabline#enabled = 1    "Automatically displays all buffers when there's only one tab open
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
 
 "------------------EasyMotion------------------------------------"
 let g:EasyMotion_smartcase = 1
@@ -196,7 +203,7 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 "高亮错误
-let g:syntastic_enable_highlighting=0
+let g:syntastic_enable_highlighting=1
 "让syntastic支持C++11
 let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 
@@ -281,6 +288,8 @@ imap <silent> <F9> <Plug>StopMarkdownPreview    " for insert mode
 augroup filetypedetect
     au BufRead,BufNewFile *.cc set filetype=cpp
 augroup END
+
+
 let g:cpp_class_scope_highlight = 1
 
 let g:cpp_member_variable_highlight = 1
@@ -300,7 +309,37 @@ xnoremap p pgvy   " 多次粘贴
 
 
 
+" 对齐 align
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
+"
+"let g:loaded_syntastic_cpp_avrgcc_checker = 1
+"let g:loaded_syntastic_cpp_clang_check_checker = 1
+"let g:loaded_syntastic_cpp_clang_tidy_checker = 1
+"let g:loaded_syntastic_cpp_cppclean_checker = 1
+"let g:loaded_syntastic_cpp_cpplint_checker = 1
+"let g:loaded_syntastic_cpp_flawfinder_checker = 1
+"let g:loaded_syntastic_cpp_gcc_checker = 1
+"let g:loaded_syntastic_cpp_pc_lint_checker = 1
+
+if filereadable("proj.vim")
+    source proj.vim
+endif
 
 
+function! s:insert_gates()
+  let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
+  execute "normal! i#ifndef " . gatename
+  execute "normal! o#define " . gatename . " "
+  execute "normal! Go#endif /* " . gatename . " */"
+  normal! kk
+endfunction
+autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
 
-
+autocmd Bufwritepre,filewritepre *.c exe "1," . 10 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%c")
+autocmd bufwritepost,filewritepost *.c execute "normal `a"

@@ -9,6 +9,7 @@ cp -v ~/.clang-format $basepath
 cp -v ~/.gitconfig $basepath
 cp -v ~/pre-commit $basepath
 cp -v ~/pre-receive $basepath
+cp -v ~/markdown2ctags.py $basepath 
 cp -v ~/.gitmessage.txt $basepath
 cp -v ~/.matlab/R2018a/*.settings $basepath/matlab/ 
 cp -v ~/.matlab/R2018a/matlab.prf $basepath/matlab/ 
