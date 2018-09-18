@@ -14,4 +14,5 @@ cp -v ~/.gitmessage.txt $basepath
 cp -v ~/.matlab/R2018a/*.settings $basepath/matlab/ 
 cp -v ~/.matlab/R2018a/matlab.prf $basepath/matlab/ 
 cp -v ~/.zotero/zotero/sgfeem6o.default/prefs.js $basepath/zetero/
+cp -rv ~/.vim/bundle/vim-snippets/ ./
 echo 'update finish'
