@@ -47,6 +47,7 @@ sudo pip2 install numpy scipy matplotlib
 sudo pip install powerline-status
 sudo apt-get install cmake3 cmake3-doc cmake3-curses-gui cmake3-qt-gui -y
 sudo apt-get install powerline
+sudo apt-get install autoconf automake libtool
 
 #gvim + spf13
 sudo add-apt-repository ppa:jonathonf/vim
