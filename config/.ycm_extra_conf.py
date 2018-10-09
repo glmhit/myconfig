@@ -43,12 +43,13 @@ flags = [
 '-isystem', '../llvm/include',
 '-isystem', '/usr/include',
 '-isystem', '/usr/local/include',
-'-isystem', '/usr/include/c++/v1',
-'-isystem', '/usr/include/c++/4.8.5',
-'-isystem', '/usr/local/include/pcl-1.8/pcl',
-'-isystem', '/opt/ros/indigo/include/ros',
-'-isystem', '/opt/ros/indigo/include',
-'-isystem', '/usr/local/include/opencv2',
+'-isystem', '/usr/include/eigen3',
+'-isystem', '/usr/include/c++/5',
+'-isystem', '/usr/include/pcl-1.7',
+'-isystem', '/opt/ros/kinetic/include',
+'-isystem', '/usr/include/opencv2',
+'-iquote','.',
+'-iquote','./*',
 ]
 
 

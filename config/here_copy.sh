@@ -8,6 +8,7 @@ cp -v ~/Haroopad.json $basepath
 cp -v ~/.clang-format $basepath
 cp -v ~/.gitconfig $basepath
 cp -v ~/pre-commit $basepath
+cp -v ~/.ycm_extra_conf.py $basepath
 cp -v ~/pre-receive $basepath
 cp -v ~/markdown2ctags.py $basepath 
 cp -v ~/.gitmessage.txt $basepath
