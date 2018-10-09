@@ -28,7 +28,7 @@ sudo apt-get updatet
 sudo apt-get install git git-flow git-doc meld
 git config --global diff.tool meld #配置默认的difftool
 git config --global merge.tool meld #配置默认的mergetool
-
+git config --global core.quotepath false  # 中文支持
 # zsh
 sudo apt-get install zsh
 chsh -s /bin/zsh
