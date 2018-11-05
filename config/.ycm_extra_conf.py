@@ -39,8 +39,8 @@ flags = [
 # relevant for c++ headers.
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x',       'c++',
-'-isystem', '../BoostParts',
-'-isystem', '../llvm/include',
+'-isystem', '/home/glm/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/BoostParts',
+'-isystem', '/home/glm/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/llvm/include',
 '-isystem', '/usr/include',
 '-isystem', '/usr/local/include',
 '-isystem', '/usr/include/eigen3',
@@ -49,7 +49,7 @@ flags = [
 '-isystem', '/opt/ros/kinetic/include',
 '-isystem', '/usr/include/opencv2',
 '-iquote','.',
-'-iquote','./*',
+'-iquote','./include',
 ]
 
 

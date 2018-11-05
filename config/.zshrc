@@ -100,7 +100,7 @@ alias grh='git reset --hard'
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 #alias gvim="gvim --remote-silent || gvim"
- gvim () { command gvim --remote-tab-silent "$@" || command gvim "$@"; }
+ #gvim () { command gvim --remote-tab-silent "$@" || command gvim "$@"; }
 alias grep="grep --color=auto"
 alias -s html='vim'   # 在命令行直接输入后缀为 html 的文件名，会在 Vim 中打开
 alias -s rb='vim'     # 在命令行直接输入 ruby 文件，会在 Vim 中打开
@@ -117,6 +117,7 @@ alias tmux='tmux -2'
 alias vi='vim'
 alias LS='ls'
 alias clion='/opt/clion/bin/clion.sh'
+alias matlab='~/opt/MATLAB/R2018a/bin/matlab'
 alias odir='gnome-open ./'
 alias ter='(terminator &)'  # 打开终端
 alias bdup='bypy upload ~/baiduyun'

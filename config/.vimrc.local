@@ -3,11 +3,13 @@ filetype plugin indent on         " vundle required
 set nocompatible                  " be iMproved, vundle required
 "filetype plugin on                " 根据文件类型加载插件
 "set guifont=DejaVu\ Sans\ Mono\ 11 "等宽字体
- set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936  "自适应文件编码,防止中文乱码
- set termencoding=utf-8
- set encoding=utf-8
- set guifont=YaHei\ Consolas\ Hybrid\ 12   "雅黑字体
-
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936  "自适应文件编码,防止中文乱码
+set termencoding=utf-8
+set encoding=utf-8
+set guifont=YaHei\ Consolas\ Hybrid\ 13   "雅黑字体
+"set guifont=Monaco:h14:cANSI
+"set guifontwide=SimSun:h14:cGB2312 "宋体
+  
 set history=2000                  "记录历史行数2000
 let g:syntastic_ignore_files=[".*\.py$"]
 set autoindent
@@ -52,7 +54,7 @@ Plugin 'Valloric/YouCompleteMe'             "代码补全插件
 Plugin 'jalcine/cmake.vim'
 Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'Chiel92/vim-autoformat'             "Format code with one button press
-Plugin 'vim-scripts/DoxygenToolkit.vim'     " doxygen"
+Plugin 'vim-scripts/DoxygenToolkit.vim'     "doxygen
 Plugin 'octol/vim-cpp-enhanced-highlight'
 "Plugin 'lilydjwg/fcitx.vim'                  "命令模式兼容中文
 "Plugin 'taketwo/vim-ros'                     "Vim with +python is required
@@ -67,11 +69,14 @@ Plugin 'ybian/smartim'
 Plugin 'ianva/vim-youdao-translater'
 Plugin 'kana/vim-operator-user'
 Plugin 'rhysd/vim-clang-format'
-Plugin 'mhinz/vim-startify'
-Plugin 'spolu/dwm.vim'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'tpope/vim-ragtag'
-
+Plugin 'mhinz/vim-startify'   "启动画面
+Plugin 'spolu/dwm.vim' "Tiled Window Management
+Plugin 'Valloric/MatchTagAlways' "highlight enclosing tags 
+Plugin 'scrooloose/vim-slumlord' "plantuml
+Plugin 'aklt/plantuml-syntax'    "plantuml
+"Plugin 'tpope/vim-ragtag'
+"Plugin 'mbbill/echofunc'
+Plugin 'a.vim'   " 头文件和源文件相互切换
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "-------------YouCompleteMe-----------------------------------"
@@ -249,18 +254,28 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
 
 
-"-------------doxygen--------------------------"
-let g:DoxygenToolkit_briefTag_pre="\\brief  "
+"-------------doxygen toolkit--------------------------"
+let g:DoxygenToolkit_briefTag_pre="\\brief @b "  " :Dox
 let g:DoxygenToolkit_paramTag_pre="\\param "
 let g:DoxygenToolkit_returnTag="\\return   "
-let g:DoxygenToolkit_authorName="guoleiming"
-let g:DoxygenToolkit_licenseTag=""  " <-- !!! Does not end with "\<enter>"
-let s:licenseTag = "Copyright(C) www.rob.ai\<enter>"
-let s:licenseTag = s:licenseTag . "2017  Technology Co., Ltd..\<enter>"
+let g:DoxygenToolkit_fileTag = "file "
+let g:DoxygenToolkit_authorTag = "author "
+let g:DoxygenToolkit_versionTag = "version "
+let g:DoxygenToolkit_blockTag = "name "
+let g:DoxygenToolkit_authorName="Stone Guo"
+let g:doxygen_enhanced_color = 1
+
+
+":DoxLic
+let s:licenseTag = "Copyright(C) www.robosense.ai\<enter>"    
+let s:licenseTag = s:licenseTag . "2017-   Technology Co., Ltd..\<enter>"
 let s:licenseTag = s:licenseTag . "All right reserved\<enter>"
 let s:licenseTag = s:licenseTag . "版权声明\<enter>"
-let s:licenseTag = s:licenseTag . "公司对其发行的作品享有版权，受各国版权法及国际版权公约的保护。\<enter>"
-let s:licenseTag = s:licenseTag . "对于上述版权内容，超越合理使用范畴、并未经本公司书面许可的使用行为，我公司均保留追究法律责任的权利。\<enter>"
+let s:licenseTag = s:licenseTag . "有限公司对其发行的作品享有版权,受各国版权法及国际版权公约的保护。\<enter>"
+let s:licenseTag = s:licenseTag . "对于上述版权内容，超越合理使用范畴、并未经本公司书面许可的使用行为，本公司均保留追究法律责任的权利。\<enter>"
+let s:licenseTag = s:licenseTag . "Author: Stone Guo \<enter>"
+let s:licenseTag = s:licenseTag . "date: ".strftime("%c"). "\<enter>"
+
 let g:DoxygenToolkit_licenseTag = s:licenseTag
 let g:doxygen_enhanced_color=1
 
@@ -327,6 +342,7 @@ endif
 "let g:loaded_syntastic_cpp_gcc_checker = 1
 "let g:loaded_syntastic_cpp_pc_lint_checker = 1
 
+" 自动载入vim的工程配置文件，用于找头文件
 if filereadable("proj.vim")
     source proj.vim
 endif
@@ -343,3 +359,46 @@ autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
 
 autocmd Bufwritepre,filewritepre *.c exe "1," . 10 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%c")
 autocmd bufwritepost,filewritepost *.c execute "normal `a"
+
+" 设置 pullproto.pl 脚本路径
+"let g:protodefprotogetter='~/.vim/bundle/vim-protodef/pullproto.pl'
+" 成员函数的实现顺序与声明顺序一致  
+let g:disable_protodef_sorting=1
+"nmap <buffer> <silent> <leader> PP
+"nmap <buffer> <silent> <leader> PN
+let g:NERDTreeChDirMode = 2
+
+
+" Language:     PlantUML
+" Maintainer:   Aaron C. Meadows &lt; language name at shadowguarddev dot com&gt;
+" Last Change:  19-Jun-2012
+" Version:      0.1
+"
+if exists("g:loaded_plantuml_plugin")
+    finish
+endif
+let g:loaded_plantuml_plugin = 1
+
+if !exists("g:plantuml_executable_script")
+        let g:plantuml_executable_script='java -jar /usr/lib/plantuml.jar -tsvg'
+endif
+let s:makecommand=g:plantuml_executable_script." %"
+
+" define a sensible makeprg for plantuml files
+autocmd Filetype plantuml let &l:makeprg=s:makecommand
+
+function <SID>FileHeading()
+  
+  let s:header = "/* ********************************************\<enter>"    
+  let s:header = s:header . "* @file:" .expand("%:t") ."\<enter>"
+  let s:header = s:header . "* @description:  \<enter>"
+  let s:header = s:header . "* @author: Stone Guo:    \<enter>"
+  let s:header = s:header . "* @date: " .strftime("%Y-%m-%d %H:%M:%S") ."\<enter>"
+  let s:header = s:header . "* @version: 1.0.0"."\<enter>"
+  let s:header = s:header . "* ******************************************\<enter>"
+  exec "normal gg"  
+  exec "normal O". s:header
+  unlet s:header
+endfunction
+command! -nargs=0 Head :call <SID>FileHeading()
+
