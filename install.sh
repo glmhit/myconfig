@@ -87,9 +87,13 @@ sudo apt-get install clang-tidy
 #ROS
 sudo pip install -U catkin_tools
 # pcap
-sudo apt-get install flex
+sudo apt-get install flex 
 sudo apt-get install byacc -y
-sudo apt-get install libpcap-dev
+sudo apt-get install -y libpcap-dev openssl libssl-dev
+
+
+#install protobuf
+sudo apt-get install -y libprotobuf-dev protobuf-compiler
 
 #性能分析工具
 sudo apt-get install valgrind  kcachegrind
