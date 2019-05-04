@@ -1,16 +1,14 @@
-## Ubuntu配置    
+## Ubuntu配置       
  系统        | 内核             
 ---          | ---
  14.04.5 LTS | 4.2.0-27-generic
+ ## 移除的软件    
+-    libreoffice    
+   
+ ##  1 开发工具         
+ ####  1.1 终端        
 
-    
-## 移除的软件
--    libreoffice
-     
 
-        
-###1 开发工具 
-####1.1 终端
  tool      | version            | 说明 |
 --         | ----             | ---
 zsh        | oh-my-zsh        |
@@ -24,7 +22,7 @@ iotop      | IO查看
 figlet     |
 
 
-####1.2 editor & version
+#### 1.2 editor & version  
 tool    | version  | 说明 |
 --      | ----  | ---
 git     |
@@ -33,7 +31,7 @@ gvim    | spf13
 meld    |
 atom    |
 
-####1.3 编译构建   
+#### 1.3 编译构建   
 
    tool   | version
 ---       | ----
@@ -55,7 +53,7 @@ opencv       | 3.2
 clion        | C++ IDE
 catkin_tools | ROS
 
-###2 浏览器
+### 2 浏览器
 - chrome插件   
 
 tool               | version
@@ -68,7 +66,7 @@ Zotero Connector      |
 微软雅黑字体          |
  
 
-###3 文档管理
+### 3 文档管理
 tool     | version     | 说明 |
 --       | ----     | ---  |
 wps      | 文字编辑
@@ -79,9 +77,9 @@ Docear   |
 印象笔记 |
 
 
-###4 日常办公  
+### 4 日常办公  
 
-tool         | version     | 说明 |
+tool         | version     | 说明 |  
 ---          | ----     | ---
 wps          |
 foxit reader | pdf
